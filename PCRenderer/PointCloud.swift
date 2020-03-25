@@ -16,7 +16,9 @@ import SceneKit
     override init() {
         super.init()
 
-        let file: String = "bun_zipper_points.ply"
+//        let file: String = "bun_zipper_points.ply"
+        let file: String = "dragon_hidden.ply"
+
         self.n = 0
         var x, y, z: Double
         (x, y, z) = (0, 0, 0)
@@ -69,7 +71,7 @@ import SceneKit
             vertices[i].x = Float(p.x)
             vertices[i].y = Float(p.y)
             vertices[i].z = Float(p.z)
-            vertices[i].r = Float(0.0)
+            vertices[i].r = Float(1.0)
             vertices[i].g = Float(1.0)
             vertices[i].b = Float(1.0)
         }

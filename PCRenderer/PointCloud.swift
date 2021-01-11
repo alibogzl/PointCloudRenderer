@@ -12,16 +12,15 @@ import SceneKit
 
     var n: Int = 0
     var pointCloud: Array<SCNVector3> = []
-
-    override init() {
-        super.init()
-
-//        let file: String = "bun_zipper_points.ply"
-        let file: String = "dragon_hidden.ply"
-
+    var url: String?
+    
+    init(url: String) {
+        self.url = url
         self.n = 0
         var x, y, z: Double
         (x, y, z) = (0, 0, 0)
+        
+        let file: String = url
 
         // Open file
         if let path = Bundle.main.path(forResource: file, ofType: "txt") {
@@ -59,7 +58,6 @@ import SceneKit
                 print(error)
             }
         }
-
     }
 
     public func getNode() -> SCNNode {

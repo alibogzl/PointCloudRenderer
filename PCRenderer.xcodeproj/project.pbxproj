@@ -19,6 +19,7 @@
 		4493A64E1ED5BE2A00329952 /* PointCloudVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4493A64C1ED5BE2A00329952 /* PointCloudVertex.swift */; };
 		4493A6521ED5BE8100329952 /* bun_zipper_points.ply.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4493A6501ED5BE8100329952 /* bun_zipper_points.ply.txt */; };
 		4493A6531ED5BE8100329952 /* dragon_hidden.ply.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4493A6511ED5BE8100329952 /* dragon_hidden.ply.txt */; };
+		C7223B0E25AB8EDB00ACB952 /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7223B0D25AB8EDB00ACB952 /* DocumentPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		04045250238BE06100E7819C /* PCRendererUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PCRendererUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04045252238BE06100E7819C /* PCRendererUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCRendererUITests.swift; sourceTree = "<group>"; };
 		04045254238BE06100E7819C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0404525A238BE21C00E7819C /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		226ADB42242BF3E500D74B11 /* PCRenderer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PCRenderer.entitlements; sourceTree = "<group>"; };
 		22EEE83F242BF93300740898 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4493A6181ED5BC7A00329952 /* Point Cloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Point Cloud.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +59,7 @@
 		4493A64C1ED5BE2A00329952 /* PointCloudVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointCloudVertex.swift; sourceTree = "<group>"; };
 		4493A6501ED5BE8100329952 /* bun_zipper_points.ply.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bun_zipper_points.ply.txt; path = Resources/bun_zipper_points.ply.txt; sourceTree = "<group>"; };
 		4493A6511ED5BE8100329952 /* dragon_hidden.ply.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = dragon_hidden.ply.txt; path = Resources/dragon_hidden.ply.txt; sourceTree = "<group>"; };
+		C7223B0D25AB8EDB00ACB952 /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +136,10 @@
 				4493A61B1ED5BC7A00329952 /* AppDelegate.swift */,
 				4493A61F1ED5BC7A00329952 /* GameViewController.swift */,
 				4493A6211ED5BC7A00329952 /* Main.storyboard */,
-				0404525A238BE21C00E7819C /* art.scnassets */,
 				4493A6241ED5BC7A00329952 /* Assets.xcassets */,
 				4493A6261ED5BC7A00329952 /* LaunchScreen.storyboard */,
 				4493A6291ED5BC7A00329952 /* Info.plist */,
+				C7223B0D25AB8EDB00ACB952 /* DocumentPickerViewController.swift */,
 			);
 			path = PCRenderer;
 			sourceTree = "<group>";
@@ -306,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7223B0E25AB8EDB00ACB952 /* DocumentPickerViewController.swift in Sources */,
 				4493A64E1ED5BE2A00329952 /* PointCloudVertex.swift in Sources */,
 				4493A6201ED5BC7A00329952 /* GameViewController.swift in Sources */,
 				4493A64D1ED5BE2A00329952 /* PointCloud.swift in Sources */,
@@ -576,7 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PCRenderer/PCRenderer.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				DEVELOPMENT_TEAM = D77CH63CLG;
+				DEVELOPMENT_TEAM = YFRDBU6DQS;
 				INFOPLIST_FILE = PCRenderer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,7 +598,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PCRenderer/PCRenderer.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				DEVELOPMENT_TEAM = D77CH63CLG;
+				DEVELOPMENT_TEAM = YFRDBU6DQS;
 				INFOPLIST_FILE = PCRenderer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (

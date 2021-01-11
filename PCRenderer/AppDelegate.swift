@@ -8,16 +8,47 @@
 
 import UIKit
 
+protocol OpenFileDelegate: AnyObject {
+    func openFile(url: String)
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    weak var delegate: OpenFileDelegate?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
           // Override point for customization after application launch.
           return true
       }
 
+    override func buildMenu(with builder: UIMenuBuilder) {
+        super.buildMenu(with: builder)
+        
+        let openFileCommand = UIKeyCommand(input: "O", modifierFlags: [.command], action: #selector(openFile))
+        openFileCommand.title = "Open file"
+        let reloadDataMenu = UIMenu(title: "Open file", image: nil, identifier: UIMenu.Identifier("openFile"), options: .displayInline, children: [openFileCommand])
+        builder.insertChild(reloadDataMenu, atStartOfMenu: .file)
+    }
+
+    @objc func openFile() {
+        let picker = DocumentPickerViewController(
+              supportedTypes: ["txt"],
+              onPick: { url in
+                guard let delegate = self.delegate else {
+                    return
+                }
+                delegate.openFile(url: url.deletingPathExtension().lastPathComponent)
+              },
+              onDismiss: {
+                  print("dismiss")
+              }
+          )
+        UIApplication.shared.windows.first?.rootViewController?.present(picker, animated: true)
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
